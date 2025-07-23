@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:title" content="【5分鐘超準旅遊人格測驗】找出最合拍旅伴｜雄獅旅遊" />
+    <meta property="og:image" content="https://quiz.liontravel.com/travel-personality/assets/preview.jpg" />
+    <title>【5分鐘超準旅遊人格測驗】找出最合拍旅伴｜雄獅旅遊</title>
+    <meta name="description" content="每個人都有專屬的旅行人格。有人熱愛自由探險，有人偏好舒適規劃；有人擅於精打細算，有人追求極致享受。想知道你是冒險型旅人？還是計畫控？立即體驗雄獅旅遊推出的【5分鐘超準旅遊人格測驗】，發掘適合你的旅行風格，找出你的靈魂旅伴。8 種人格全面解析，點擊立即測驗，玩遊戲領折扣碼，跟雄獅一起暢遊世界！" />
+    <link rel="icon" type="image/svg+xml" href="/assets/lionLogo.png" />
+    <link rel="stylesheet" href="/202502_lion_login/css/header_footer.css" />
+    <script type="text/javascript" src="/202502_lion_login/js/jquery.min.js"></script>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+    </style>
+    <!-- Google Tag Manager -->
+    <script>
+      ;(function (w, d, s, l, i) {
+        w[l] = w[l] || []
+        w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' })
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != 'dataLayer' ? '&l=' + l : ''
+        j.async = true
+        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl
+        f.parentNode.insertBefore(j, f)
+      })(window, document, 'script', 'dataLayer', 'GTM-NBMKXS6')
+    </script>
+    <!-- End Google Tag Manager -->
+  </head>
+
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+      <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NBMKXS6" height="0" width="0" style="display: none; visibility: hidden"></iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div class="project">
+      <header class="header">
+        <div class="projectContainer">
+          <nav>
+            <div class="logo">
+              <a href="https://www.liontravel.com/category/zh-tw/index">
+                <img src="/assets/lionsignature.svg" alt="雄獅旅遊" />
+              </a>
+            </div>
+          </nav>
+        </div>
+      </header>
+    </div>
+
+    <a id="Lionlogin" href="javascript:;"></a>
+
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+
+    <footer class="footer">
+      <p class="white">Copyright©LION TRAVEL SERVICE CO., LTD. All Rights Reserved</p>
+    </footer>
+  </body>
+</html>
+<script>
+  $(function () {
+    // --------
+    $('#Lionlogin').on('click', function () {
+      const userAgent = navigator.userAgent
+      const isLionB2CAPP = userAgent.includes('LionB2CAPP')
+
+      if (isLionB2CAPP) {
+        // App 環境的處理
+        handleAppLogin()
+      } else {
+        // 網頁環境的處理
+        showLightSpeedLoginLightboxWithCallback('chkMemberLightSpeedLogin')
+      }
+    })
+
+    // 將 App 登入邏輯移到外面定義
+    function handleAppLogin() {
+      function isAndroid() {
+        return /Android/i.test(navigator.userAgent)
+      }
+
+      function openAppNativeLoginPage() {
+        const pageName = 'LoginPage'
+        console.log('openPageInApp called')
+
+        if (isAndroid()) {
+          console.log('Detected as Android')
+          if (window.Android && window.Android.openPage) {
+            window.Android.openPage(pageName)
+          } else {
+            alert('Android interface not found')
+          }
+        } else {
+          console.log('Detected as iOS')
+          if (window.webkit && window.webkit.messageHandlers && window.webkit.messageHandlers.openPage) {
+            console.log('Sending message to iOS')
+            window.webkit.messageHandlers.openPage.postMessage(pageName)
+          } else {
+            alert('iOS interface not found')
+          }
+        }
+      }
+
+      openAppNativeLoginPage()
+    }
+  
+  // -----------
+  })
+</script>
+<script crossorigin="" src="/202502_lion_login/_webassets/consoleap/library/react.production.min.js" defer=""></script>
+<script crossorigin="" src="/202502_lion_login/_webassets/consoleap/library/react-dom.production.min.js" defer=""></script>
+<link rel="preload" href="/202502_lion_login/_webassets/consoleap/templates/login_lion/theme/default.css?1.7.06" as="style" />
+<link href="/202502_lion_login/_webassets/consoleap/templates/login_lion/theme/default.css?1.7.06" rel="stylesheet" />
+
+<div id="login_lion" class="pge_conl"></div>
+
+<script type="text/javascript" src="/202502_lion_login/_webassets/consoleap/templates/login_lion/module.js?1.7.06" defer=""></script>
+
+<script src="/202502_lion_login/js/B2CHeader.js?v=3" type="text/javascript"></script>
+<div class="core">
+  <div id="lionLogin" class="lbx_lnop">
+    <div class="lbx_lnop_dialog" style="top: -950px">
+      <div class="lbx_lnop_content">
+        <a href="#" class="closeBtn"></a>
+        <div class="login-container wrap">
+          <iframe class="section" data-section="login"></iframe>
+          <iframe class="section" data-section="RegistrationAgreeTerms"></iframe>
+          <iframe class="section" data-section="Register"></iframe>
+          <iframe class="section" data-section="OpenIdRegistrationAgreeTerms"></iframe>
+          <iframe class="section" data-section="LoginById"></iframe>
+          <iframe class="section" data-section="UpgradeService"></iframe>
+          <iframe class="section" data-section="ForgotPassword"></iframe>
+          <iframe class="section" data-section="NoVerifiedEmailReceived"></iframe>
+          <iframe class="section" data-section="SendOverVerifiedEmail"></iframe>
+          <iframe class="section" data-section="LoginUnverified"></iframe>
+          <iframe class="section" data-section="StoreRegisterByEmail"></iframe>
+          <iframe class="section" data-section="StoreRegisterByPhone"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
